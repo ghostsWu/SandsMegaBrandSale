@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/bacecss.css">
+	<link rel="stylesheet" type="text/css" href="css/bs.css">
+	<script type="text/javascript" src="js/loader.js" async="async"></script>
+	<title>Sands Mega Brand Sale</title>
+</head>
+<body>
+	<div class="title">
+		<img class="sandslogo" src="images/BS_sands-logo.png">
+
+		<!-- 3个qr标签 -->
+		<div class="qrcode_list">
+			<div class="qrcode first_qr" onclick="mark(this);">
+				<!-- 正面 -->
+				<span class="default"><img src="images/BS_qr-default.png"></span>
+				<!-- 反面 -->
+				<span class="get"><img src="images/BS_qr-get.png"></span>
+			</div>
+			<div class="qrcode second_qr" onclick="mark(this);">
+				<!-- 正面 -->
+				<span class="default"><img src="images/BS_qr-default.png"></span>
+				<!-- 反面 -->
+				<span class="get"><img src="images/BS_qr-get.png"></span>
+			</div>
+			<div class="qrcode third_qr" onclick="mark(this);">
+				<!-- 正面 -->
+				<span class="default"><img src="images/BS_qr-default.png"></span>
+				<!-- 反面 -->
+				<span class="get"><img src="images/BS_qr-get.png"></span>
+			</div>
+		</div>
+	</div>
+	<div class="brand_sale">
+		<p class="sale_link">详细请浏览 <a href="http://www.sandsresortsmacao.com/shopping/mega-brand-sale-2017.html">SandsResortsMacao.com/BrandSale2017</a>.</p>
+	</div>
+
+	<!-- 置顶按钮 -->
+	<span class="top_button map"><a href="#">集码向导</a></span>
+	<span class="top_button game_rules"><a href="#">游戏规则</a></span>
+	<!-- 置顶按钮 -->
+
+
+
+	<!-- 黑色底框 -->
+	<div class="infbox">
+	<!-- 黑色底框 -->
+		<!-- 关闭按钮 -->
+		<span class="close">
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+				<g>
+
+					<line fill="none" stroke="#808080" stroke-linecap="round" stroke-miterlimit="10" x1="1.212" y1="1.212" x2="30.788" y2="30.788"/>
+
+					<line fill="none" stroke="#808080" stroke-linecap="round" stroke-miterlimit="10" x1="30.788" y1="1.212" x2="1.212" y2="30.788"/>
+				</g>
+			</svg>
+		</span>
+
+		<!-- 抽奖表单 -->
+		<div class="userfrom">
+			<h3>您已经集齐所需二维码</h3>
+			<h2>参加豪华住宿抽奖</h2>
+
+			<p>请提供您的联系信息</p>
+
+			<form class="user_from">
+				<input type="text" name="name" placeholder="姓名">
+				<input type="text" name="email" placeholder="电子邮箱">
+				<input type="text" name="phone" placeholder="联系电话">
+				<input type="submit" value="确认">
+			</form>
+
+			<p><a href="#">条款与细则</a></p>
+		</div>
+
+		<!-- 提交成功信息 -->
+		<div class="submit_success">
+			<h2>登记成功</h2>
+			<h3>中奖后我们的客服人员<br />会第一时间联系您</h3>
+
+			<p>欢迎了解更多</p>
+			<h3>金沙时尚倾销展<br />Sands Mega Brands Sale</h3>
+			<p>欢迎了解更多</p>
+		</div>
+
+		<!-- QRcode 地图 -->
+		<div class="map_content" >
+			<h3>二维码位置导向</h3>
+			<div class="qr_position">
+				<img src="images/bs_mapimg.jpg">
+				<div class="position_text">
+					<span>1</span>
+					5楼，圣奥诺雷路541号铺 5楼，圣奥诺雷路541号铺 5楼，圣奥诺雷路541号铺
+				</div>
+			</div>
+			<div class="qr_position">
+				<img src="images/bs_mapimg.jpg">
+				<div class="position_text">
+					<span>2</span>
+					5楼，圣奥诺雷路541号铺
+				</div>
+			</div>
+			<div class="qr_position">
+				<img src="images/bs_mapimg.jpg">
+				<div class="position_text">
+					<span>3</span>
+					5楼，圣奥诺雷路541号铺
+				</div>
+			</div>
+		</div>
+
+
+		
+
+	</div>
+
+
+	<script type="text/javascript">
+
+		var qrget = 0;
+
+
+		function mark(e){
+			console.log(e.className);
+
+			e.className = e.className + " mark";
+
+			qrget++;
+
+			if (qrget >= 3) {
+
+				setTimeout(function(){
+
+					document.querySelector(".infbox").style.display = "block";
+					document.querySelector(".userfrom").style.display = "block"	
+
+				},2700)
+
+
+				
+
+			}
+
+		}	
+
+		// 点击提交信息
+		document.querySelector(".userfrom input[type=submit]").onclick = function(){
+			document.querySelector(".infbox").style.display = "block";
+			document.querySelector(".submit_success").style.display = "block";
+			document.querySelector(".userfrom").style.display = "none";
+			document.querySelector(".map_content").style.display = "none";
+		}
+
+
+
+		// 打开地图
+		document.querySelector(".map").onclick = function(){
+			document.querySelector(".infbox").style.display = "block";
+			document.querySelector(".map_content").style.display = "block";
+		}
+
+		// 关闭弹出框
+		document.querySelector(".infbox .close").onclick = function(){
+			document.querySelector(".infbox").style.display = "none";
+			document.querySelector(".submit_success").style.display = "none";
+			document.querySelector(".userfrom").style.display = "none";
+			document.querySelector(".map_content").style.display = "none";
+		}
+
+
+
+
+	</script>
+</body>
+</html>

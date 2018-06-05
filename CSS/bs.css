@@ -1,0 +1,447 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-color: #D9D9D9;
+  position: relative;
+  z-index: 1;
+  color: #333333;
+  font-size: 12px;
+  font-weight: 300;
+  max-width: 440px;
+  max-height: 800px;
+  margin: 0 auto;
+  min-height: 600px;
+}
+a,
+a:active,
+a:focus,
+a:visited {
+  color: #333333;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+.title {
+  height: 50%;
+  background-image: url(../images/bs_title-bg.jpg);
+  background-size: 100% auto;
+  background-position: center 5%;
+  background-repeat: no-repeat;
+  text-align: center;
+  position: relative;
+}
+.title .sandslogo {
+  width: 35%;
+  margin-top: 1em;
+}
+.brand_sale {
+  height: 50%;
+  background-image: url(../images/bs_brandsale-bg.jpg);
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+.brand_sale .sale_link {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0px 0px 2px #ffffff;
+  background-color: rgba(233, 233, 233, 0.47);
+}
+.brand_sale .sale_link a {
+  text-decoration: underline;
+}
+.brand_sale .sale_link a:hover {
+  background-color: #fff;
+}
+.top_button {
+  position: absolute;
+  line-height: 1em;
+  top: 1em;
+  background-color: #221d58;
+  display: block;
+  padding: 5px;
+  border-radius: 1px;
+  color: #fff;
+}
+.top_button a {
+  color: #fff;
+}
+.map {
+  left: 1em;
+}
+.game_rules {
+  right: 1em;
+}
+.qrcode_list {
+  position: absolute;
+  width: 58%;
+  height: 54px;
+  top: 74%;
+  left: 21%;
+  text-align: justify;
+  margin: 0 auto;
+}
+.qrcode_list:after {
+  width: 100%;
+  height: 1px;
+  display: inline-block;
+  content: "";
+}
+.qrcode_list .qrcode {
+  width: 26%;
+  height: 86px;
+  display: inline-block;
+  position: relative;
+}
+.qrcode_list span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.qrcode_list .get {
+  display: none;
+}
+.qrcode_list .get:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: url(../images/BS_get-mark.png);
+  background-repeat: no-repeat;
+  background-size: 116%;
+  background-position: 50% -32%;
+}
+.qrcode_list .default {
+  display: block;
+}
+.qrcode_list .mark .get {
+  display: block;
+}
+.qrcode_list .mark .default {
+  display: none;
+}
+.infbox {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.infbox > div {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 40px 6px 0px 6px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.76);
+}
+.infbox > div:before {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  left: -6px;
+  top: -6px;
+  width: 100%;
+  height: 100%;
+  content: "";
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.57);
+}
+.infbox h3,
+.infbox h2 {
+  margin: 0;
+  color: #8F7733;
+}
+.infbox h3 + p,
+.infbox h2 + p {
+  margin-top: 2em;
+}
+.infbox .close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 32px;
+  height: 32px;
+  z-index: 3;
+}
+.infbox a {
+  text-decoration: underline;
+}
+.user_from {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.user_from input[type=text] {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 18px;
+  padding: 6px 4px 6px 4px;
+  background-color: #F2F2F2;
+  border: none;
+  border-bottom: 1px solid #544891;
+  border-radius: 0px;
+}
+.user_from input[type=submit] {
+  background-color: #544891;
+  width: 100%;
+  font-size: 18px;
+  padding: 6px 4px 6px 4px;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+}
+.map_content > div {
+  max-height: 29.5%;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.map_content h3 {
+  margin-bottom: 1em;
+}
+.map_content .qr_position {
+  position: relative;
+}
+.map_content .qr_position .position_text {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.54);
+  padding: 6px 6px;
+  text-align: right;
+  color: #fff;
+  padding-left: 3em;
+  line-height: 1.5;
+}
+.map_content .position_text span {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  left: 0;
+  top: 0;
+  text-align: center;
+  top: 50%;
+  margin-top: -0.5em;
+  left: 2px;
+}
+.submit_success {
+  display: none;
+}
+.userfrom {
+  display: none;
+}
+.map_content {
+  display: none;
+}
+.qrcode_list {
+  -webkit-perspective: 500;
+          perspective: 500;
+}
+.qrcode_list .qrcode {
+  -webkit-animation-name: qrcode_list;
+          animation-name: qrcode_list;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+          animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.qrcode_list .mark {
+  -webkit-animation-name: qrcode_list2;
+          animation-name: qrcode_list2;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+          animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.qrcode_list .first_qr {
+  -webkit-animation-delay: .0s;
+          animation-delay: .0s;
+}
+.qrcode_list .second_qr {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.qrcode_list .third_qr {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@-webkit-keyframes qrcode_list {
+  0% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+@keyframes qrcode_list {
+  0% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes qrcode_list2 {
+  0% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+@keyframes qrcode_list2 {
+  0% {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+    opacity: 1;
+  }
+}
+.mark .get:after {
+  -webkit-animation-name: qrmark;
+          animation-name: qrmark;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: cubic-bezier(0.69, 0.04, 0.63, 1.54);
+          animation-timing-function: cubic-bezier(0.69, 0.04, 0.63, 1.54);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.mark.first_qr .get:after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.mark.second_qr .get:after {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+.mark.third_qr .get:after {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+@-webkit-keyframes qrmark {
+  from {
+    opacity: 0;
+    background-size: 146%;
+  }
+  to {
+    opacity: 1;
+    background-size: 116%;
+  }
+}
+@keyframes qrmark {
+  from {
+    opacity: 0;
+    background-size: 146%;
+  }
+  to {
+    opacity: 1;
+    background-size: 116%;
+  }
+}
+.infbox {
+  -webkit-animation-name: infbox;
+          animation-name: infbox;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+          animation-timing-function: cubic-bezier(0.8, 0.02, 0.6, 1.24);
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes infbox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes infbox {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
